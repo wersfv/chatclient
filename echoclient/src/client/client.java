@@ -23,7 +23,7 @@ public class client {
 	
 	public static void init() { 
 		try { 
-			clientSocket = new Socket("localhost", 8981); 
+			clientSocket = new Socket("172.17.0.1", 8981); 
 			System.out.println("Server Connect");
 			br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));// 서버로 부터 데이터를 받아올 준비 
 			pw = new PrintWriter(clientSocket.getOutputStream());// 서버로 데이터를 보낼 준비 
